@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اساسيات JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #6a11cb;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        main:hover {
+            transform: translateY(-5px);
+        }
+        article {
+            margin-bottom: 40px;
+        }
+        article h2 {
+            color: #6a11cb;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        article p {
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            overflow-x: auto;
+            color: #333;
+        }
+        pre code {
+            color: #6a11cb;
+        }
+        button {
+            background-color: #6a11cb;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اساسيات JavaScript</h1>
+    </header>
+    <main>
+        <article>
+            <h2>مقدمة في JavaScript</h2>
+            <p>
+                JavaScript (جافا سكربت) هي لغة برمجة ديناميكية تُستخدم بشكل رئيسي في تطوير صفحات الويب لإضافة تفاعلية مع المستخدم.
+                تم تطوير JavaScript في عام 1995 بواسطة Brendan Eich. تُستخدم JavaScript بشكل أساسي في تطوير الويب لتمكين التطبيقات التفاعلية
+                والبرمجة الديناميكية.
+            </p>
+        </article>
+
+        <article>
+            <h2>وظائف JavaScript</h2>
+            <ul>
+                <li>التفاعلية: تُستخدم لإضافة استجابات سريعة للأحداث مثل النقر على الأزرار.</li>
+                <li>معالجة البيانات: معالجة البيانات بدون إعادة تحميل الصفحة باستخدام AJAX.</li>
+                <li>التحكم في DOM: تعديل هيكل صفحات HTML في الوقت الفعلي.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>بيئات التشغيل</h2>
+            <p>
+                - **في المتصفح**: تعمل JavaScript مباشرة في المتصفح لإضافة تفاعلية وتحديث البيانات بدون الحاجة لإعادة تحميل الصفحة.<br>
+                - **على الخادم**: مع ظهور Node.js، أصبحت JavaScript تُستخدم في جانب الخادم لبناء تطبيقات كاملة.
+            </p>
+        </article>
+
+        <article>
+            <h2>مكتبات وأطر العمل</h2>
+            <ul>
+                <li>jQuery: مكتبة تساعد في كتابة أكواد JavaScript بسهولة.</li>
+                <li>React.js: مكتبة لتطوير واجهات المستخدم.</li>
+                <li>Angular.js: إطار عمل لبناء تطبيقات ويب معقدة.</li>
+                <li>Vue.js: إطار عمل مرن لبناء تطبيقات الويب.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>مفاهيم أساسية</h2>
+            <p>
+                - **المتغيرات**: JavaScript تسمح بتخزين البيانات في متغيرات باستخدام `let`، `var`، و`const`.<br>
+                - **الدوال**: الدوال في JavaScript هي كتل من التعليمات يمكن استدعاؤها لتنفيذ مهمة معينة.<br>
+                - **الكائنات**: تعتمد JavaScript بشكل كبير على الكائنات، التي تحتوي على بيانات ووظائف.<br>
+                - **التعامل مع الأحداث**: يمكن لـ JavaScript الاستجابة للأحداث مثل النقر أو التحريك.
+            </p>
+        </article>
+
+        <article>
+            <h2>مثال بسيط على JavaScript</h2>
+            <pre><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="ar"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;مثال JavaScript&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;أهلاً بك في JavaScript&lt;/h1&gt;
+                    &lt;button onclick="sayHello()"&gt;اضغط هنا&lt;/button&gt;
+
+                    &lt;script&gt;
+                        function sayHello() {
+                            alert('مرحباً، لقد ضغطت على الزر!');
+                        }
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+        </article>
+    </main>
+    <footer>
+        <p>© 2024 محمود حسن عون الله - جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>

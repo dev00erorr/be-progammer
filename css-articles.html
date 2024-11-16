@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اساسيات CSS</title>
+    <style>
+        /* تصميم عام */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+        article {
+            margin-bottom: 40px;
+        }
+        article h2 {
+            color: #2575fc;
+            border-bottom: 2px solid #6a11cb;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        article p, article ul {
+            line-height: 1.8;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .example-box {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+            border: 2px solid #333;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .example-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 15px 0;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                padding: 15px;
+            }
+            article h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اساسيات CSS</h1>
+    </header>
+    <main>
+        <article>
+            <h2>مقدمة في CSS</h2>
+            <p>
+                CSS (Cascading Style Sheets) هي لغة تصميم تُستخدم لتنسيق مظهر صفحات الويب. 
+                تعمل CSS جنبًا إلى جنب مع HTML لتعطي صفحات الويب شكلها وجماليتها من حيث الألوان، الخطوط، التخطيطات، وحجم العناصر.
+            </p>
+        </article>
+
+        <article>
+            <h2>طرق إضافة CSS</h2>
+            <p>يمكن تطبيق CSS على صفحة HTML بثلاث طرق:</p>
+            <ul>
+                <li><strong>الأسلوب الداخلي (Inline CSS)</strong>: يتم إضافة CSS مباشرة إلى وسم HTML باستخدام الخاصية `style`.</li>
+                <li><strong>الأسلوب الداخلي</strong> - مثال:
+                    <p style="color: blue; font-size: 20px;">هذا نص بألوان وأحجام مخصصة باستخدام الأسلوب الداخلي.</p>
+                </li>
+                <li><strong>الأسلوب الخارجي (External CSS)</strong>: يتم ربط ملف CSS خارجي بملف HTML باستخدام وسم `<link>`.</li>
+                <li><strong>الأسلوب الخارجي</strong> - مثال: 
+                    <div class="example-box">هذا مربع منسق باستخدام CSS الخارجي.</div>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>أهم خصائص CSS</h2>
+            <ul>
+                <li><strong>color</strong>: لتغيير لون النص.</li>
+                <li><strong>font-size</strong>: لتحديد حجم النص.</li>
+                <li><strong>background-color</strong>: لتحديد لون الخلفية.</li>
+                <li><strong>margin</strong>: لتحديد المسافة خارج العنصر.</li>
+                <li><strong>padding</strong>: لتحديد المسافة داخل العنصر.</li>
+                <li><strong>display</strong>: لتحديد كيفية عرض العناصر.</li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>© 2024 محمود حسن عون الله - جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>

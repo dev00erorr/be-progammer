@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اساسيات C++</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        article {
+            margin-bottom: 30px;
+        }
+        article h2 {
+            border-bottom: 3px solid #2575fc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+        article p, ul {
+            line-height: 1.8;
+        }
+        ul {
+            padding-left: 20px;
+            list-style: circle;
+        }
+        pre {
+            background: #333;
+            color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+        pre code {
+            color: #ff7f50;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                padding: 15px;
+            }
+            article h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اساسيات C++</h1>
+    </header>
+    <main>
+        <article>
+            <h2>مقدمة في C++</h2>
+            <p>
+                C++ هي لغة برمجة متعددة الأغراض، تُستخدم بشكل واسع في تطوير البرمجيات، الألعاب، والأنظمة المضمنة. 
+                تم تصميمها كامتداد للغة C، وتضيف ميزات مثل البرمجة الكائنية والتخصيص الديناميكي للذاكرة.
+            </p>
+        </article>
+
+        <article>
+            <h2>وظائف C++</h2>
+            <ul>
+                <li>تطوير البرمجيات: تُستخدم C++ لتطوير البرمجيات الكبيرة والمعقدة.</li>
+                <li>برمجة الألعاب: تعتبر C++ من اللغات الرائدة في صناعة الألعاب.</li>
+                <li>التعامل مع الأنظمة المضمنة: تُستخدم C++ في تطوير الأنظمة التي تحتاج إلى التحكم في العتاد مباشرة.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>ميزات C++</h2>
+            <ul>
+                <li><strong>البرمجة الكائنية (OOP)</strong>: تدعم C++ مبادئ OOP مثل الكائنات، الفئات، والوراثة.</li>
+                <li><strong>التخصيص الديناميكي للذاكرة</strong>: يسمح للمطورين بإدارة الذاكرة بشكل أكثر كفاءة.</li>
+                <li><strong>قابلية النقل</strong>: يمكن تشغيل برامج C++ على أنظمة تشغيل متعددة دون تعديل كبير.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>أنواع البيانات الأساسية في C++</h2>
+            <ul>
+                <li><strong>int</strong>: للأعداد الصحيحة.</li>
+                <li><strong>float</strong>: للأعداد العشرية.</li>
+                <li><strong>double</strong>: للأعداد العشرية ذات الدقة العالية.</li>
+                <li><strong>char</strong>: لتخزين حرف واحد.</li>
+                <li><strong>bool</strong>: لتخزين القيم الصحيحة (true أو false).</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>مثال بسيط على برنامج C++</h2>
+            <pre>
+                <code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "مرحباً بك في C++" &lt;&lt; endl;
+    return 0;
+}
+                </code>
+            </pre>
+            <p>الكود أعلاه يقوم بعرض عبارة "مرحباً بك في C++" على الشاشة باستخدام دالة <code>cout</code>.</p>
+        </article>
+    </main>
+    <footer>
+        <p>© 2024 محمود حسن عون الله - جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>
